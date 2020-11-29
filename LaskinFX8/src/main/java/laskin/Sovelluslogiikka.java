@@ -21,9 +21,9 @@ public class Sovelluslogiikka {
         return tulos;
     }
 
-    public int edellinen() {
+    public void edellinen() {
         tulos = edellinenTulos;
-        return tulos;
+        edellinenTulos = 0;
     }
 }
 

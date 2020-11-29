@@ -21,7 +21,7 @@ public class Summa extends Komento {
     @Override
     public void peru() {
         sovellus.edellinen();
-        tuloskentta.setText(Integer.toString(sovellus.edellinen()));
+        tuloskentta.setText(Integer.toString(sovellus.tulos()));
         undo.disableProperty().set(true);
     }
 }

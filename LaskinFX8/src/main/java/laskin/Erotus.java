@@ -22,7 +22,7 @@ public class Erotus extends Komento {
     public void peru() {
         sovellus.edellinen();        
         //sovellus.plus(Integer.parseInt(syotekentta.getText()));
-        tuloskentta.setText(Integer.toString(sovellus.edellinen()));
+        tuloskentta.setText(Integer.toString(sovellus.tulos()));
         undo.disableProperty().set(true);
     }
 }

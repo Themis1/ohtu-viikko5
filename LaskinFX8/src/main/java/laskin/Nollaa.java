@@ -13,16 +13,16 @@ public class Nollaa extends Komento {
     public void suorita() {
         sovellus.nollaa();
         tuloskentta.setText(Integer.toString(sovellus.tulos()));
+        syotekentta.setText(Integer.toString(0));
         undo.disableProperty().set(false);
-        nollaa.disableProperty().set(true);   
-        syotekentta.setText(Integer.toString(0));             
+        nollaa.disableProperty().set(true);               
     }  
 
     @Override
     public void peru() {
         sovellus.edellinen();        
         // sovellus.miinus(Integer.parseInt(syotekentta.getText));
-        tuloskentta.setText(Integer.toString(sovellus.edellinen()));
+        tuloskentta.setText(Integer.toString(sovellus.tulos()));
         undo.disableProperty().set(true);
     }
 }
