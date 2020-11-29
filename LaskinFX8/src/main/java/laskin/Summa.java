@@ -3,12 +3,7 @@ package laskin;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class Summa extends Komento {
-    private Sovelluslogiikka sovellus;
-    private TextField tuloskentta;
-    private TextField syotekentta;  
-    private Button undo;
-    private Button nollaa;      
+public class Summa extends Komento {      
 
     public Summa(TextField tuloskentta, TextField syotekentta, Button nollaa, Button undo, Sovelluslogiikka sovellus) {
         super(tuloskentta, syotekentta, nollaa, undo, sovellus);
@@ -17,8 +12,8 @@ public class Summa extends Komento {
     @Override
     public void suorita() {
         sovellus.plus(Integer.parseInt(syotekentta.getText()));
-        tuloskentta.setText("" + sovellus.tulos());
-        //tuloskentta.setText(Integer.toString(sovellus.tulos()));
+        //tuloskentta.setText("" + sovellus.tulos());
+        tuloskentta.setText(Integer.toString(sovellus.tulos()));
         undo.disableProperty().set(false);
     }  
 

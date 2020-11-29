@@ -3,9 +3,6 @@ package laskin;
 public class Sovelluslogiikka {
     private int tulos;
 
-    public Sovelluslogiikka(){
-        this.tulos = 0;
-    }
     public void plus(int luku) {
         this.tulos += luku;
     }

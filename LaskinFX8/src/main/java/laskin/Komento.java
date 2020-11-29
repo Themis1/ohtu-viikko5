@@ -7,12 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class Komento {
-    private TextField tuloskentta; 
-    private TextField syotekentta; 
-    private Button plus;
-    private Button miinus;
-    private Button nollaa;    
-    private Sovelluslogiikka sovellus;    
+    protected TextField tuloskentta; 
+    protected TextField syotekentta; 
+    protected Button plus;
+    protected Button miinus;
+    protected Button nollaa;    
+    protected Sovelluslogiikka sovellus;   
+    protected Button undo; 
 
     public Komento(TextField tuloskentta, TextField syotekentta, Button nollaa, Button undo, Sovelluslogiikka sovellus){ 
         this.tuloskentta = tuloskentta;

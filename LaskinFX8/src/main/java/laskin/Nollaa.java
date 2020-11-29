@@ -4,11 +4,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 public class Nollaa extends Komento {
-    private Sovelluslogiikka sovellus;
-    private TextField tuloskentta;
-    private TextField syotekentta;
-    private Button undo;
-    private Button nollaa;    
 
     public Nollaa(TextField tuloskentta, TextField syotekentta, Button nollaa, Button undo, Sovelluslogiikka sovellus) {
         //super(tuloskentta, syotekentta, plus, miinus, nollaa, undo);
@@ -17,7 +12,8 @@ public class Nollaa extends Komento {
 
     @Override
     public void suorita() {
-        tuloskentta.setText("0");
+        sovellus.nollaa();
+        tuloskentta.setText("" + sovellus.tulos());
     }  
 
     @Override
