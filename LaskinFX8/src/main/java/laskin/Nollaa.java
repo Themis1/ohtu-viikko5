@@ -6,7 +6,6 @@ import javafx.scene.control.TextField;
 public class Nollaa extends Komento {
 
     public Nollaa(TextField tuloskentta, TextField syotekentta, Button nollaa, Button undo, Sovelluslogiikka sovellus) {
-        //super(tuloskentta, syotekentta, plus, miinus, nollaa, undo);
         super(tuloskentta, syotekentta, nollaa, undo, sovellus);
     }
 
@@ -14,10 +13,14 @@ public class Nollaa extends Komento {
     public void suorita() {
         sovellus.nollaa();
         tuloskentta.setText("" + sovellus.tulos());
+        undo.disableProperty().set(false);
+        nollaa.disableProperty().set(true);        
     }  
 
     @Override
     public void peru() {
-        return;
+        // sovellus.miinus(Integer.parseInt(syotekentta.getText));
+        // tuloskentta.setText(Integer.toString(sovellus.tulos()));
+        undo.disableProperty().set(true);
     }
 }

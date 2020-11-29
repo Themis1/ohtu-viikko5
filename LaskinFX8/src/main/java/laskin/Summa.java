@@ -12,14 +12,16 @@ public class Summa extends Komento {
     @Override
     public void suorita() {
         sovellus.plus(Integer.parseInt(syotekentta.getText()));
-        //tuloskentta.setText("" + sovellus.tulos());
         tuloskentta.setText(Integer.toString(sovellus.tulos()));
         undo.disableProperty().set(false);
+        nollaa.disableProperty().set(false);
     }  
 
     @Override
     public void peru() {
-        return;
+        sovellus.miinus(Integer.parseInt(syotekentta.getText()));
+        tuloskentta.setText(Integer.toString(sovellus.tulos()));
+        undo.disableProperty().set(true);
     }
 }
 

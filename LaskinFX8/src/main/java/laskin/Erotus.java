@@ -15,10 +15,13 @@ public class Erotus extends Komento {
         sovellus.miinus(Integer.parseInt(syotekentta.getText()));
         tuloskentta.setText(Integer.toString(sovellus.tulos()));
         undo.disableProperty().set(false);
+        nollaa.disableProperty().set(false);
     } 
 
     @Override
     public void peru() {
-        return;
+        sovellus.plus(Integer.parseInt(syotekentta.getText()));
+        tuloskentta.setText(Integer.toString(sovellus.tulos()));
+        undo.disableProperty().set(true);
     }
 }
