@@ -12,15 +12,17 @@ public class Nollaa extends Komento {
     @Override
     public void suorita() {
         sovellus.nollaa();
-        tuloskentta.setText("" + sovellus.tulos());
+        tuloskentta.setText(Integer.toString(sovellus.tulos()));
         undo.disableProperty().set(false);
-        nollaa.disableProperty().set(true);        
+        nollaa.disableProperty().set(true);   
+        syotekentta.setText(Integer.toString(0));             
     }  
 
     @Override
     public void peru() {
+        sovellus.edellinen();        
         // sovellus.miinus(Integer.parseInt(syotekentta.getText));
-        // tuloskentta.setText(Integer.toString(sovellus.tulos()));
+        tuloskentta.setText(Integer.toString(sovellus.edellinen()));
         undo.disableProperty().set(true);
     }
 }

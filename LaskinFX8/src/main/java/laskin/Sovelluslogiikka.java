@@ -2,18 +2,28 @@ package laskin;
 
 public class Sovelluslogiikka {
     private int tulos;
+    private int edellinenTulos;
 
     public void plus(int luku) {
-        this.tulos += luku;
+        edellinenTulos = tulos;
+        tulos += luku;
     }
     public void miinus(int luku) {
-        this.tulos -= luku;
+        edellinenTulos = tulos;
+        tulos -= luku;
     }
     public void nollaa() {
-        this.tulos = 0;
+        edellinenTulos = tulos;
+        tulos = 0;
     }
+
     public int tulos() {
-        return this.tulos;
+        return tulos;
+    }
+
+    public int edellinen() {
+        tulos = edellinenTulos;
+        return tulos;
     }
 }
 
