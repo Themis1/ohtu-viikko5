@@ -21,7 +21,7 @@ public abstract class Komento {
         this.plus = plus;
         this.miinus = miinus;
         this.nollaa = nollaa;    
-        this.sovellus = new Sovelluslogiikka();
+        this.sovellus = sovellus;
         this.undo = undo;
     }
     public abstract void suorita();
